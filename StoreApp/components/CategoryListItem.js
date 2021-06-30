@@ -1,13 +1,13 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
+import Images from "../contants/images";
 
 export default function CategoryListItem(props) {
-  const { title, image } = props;
-
+  const { name } = props.category;
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <Image style={styles.categoryImage} source={image} />
+      <Text style={styles.title}>{name}</Text>
+      <Image style={styles.categoryImage} source={Images.CONG_TAY} />
     </View>
   );
 }
