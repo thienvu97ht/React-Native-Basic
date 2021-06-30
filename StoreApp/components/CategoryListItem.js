@@ -1,14 +1,27 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+  Alert,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import Images from "../contants/images";
 
 export default function CategoryListItem(props) {
   const { name } = props.category;
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{name}</Text>
-      <Image style={styles.categoryImage} source={Images.CONG_TAY} />
-    </View>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      onPress={() => {
+        Alert.alert("Xin chào 500 ae!!!");
+      }}>
+      <View style={styles.container}>
+        <Text style={styles.title}>{name}</Text>
+        <Image style={styles.categoryImage} source={Images.CONG_TAY} />
+      </View>
+    </TouchableOpacity>
   );
 }
 
