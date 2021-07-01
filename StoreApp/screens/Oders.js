@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function OdersScreen() {
   return (
     <View style={styles.container}>
-      <Text>OdersScreen</Text>
+      <Text>ODERS</Text>
     </View>
   );
 }

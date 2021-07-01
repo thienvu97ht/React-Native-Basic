@@ -192,7 +192,13 @@ export function AppNavigator() {
           inactiveTintColor: "gray",
         }}>
         <Tab.Screen name="Home" component={HomeStackScreen} />
-        <Tab.Screen name="Cart" component={CartStackScreen} />
+        <Tab.Screen
+          name="Cart"
+          component={CartStackScreen}
+          options={{
+            tabBarBadge: 3,
+          }}
+        />
         <Tab.Screen name="Oders" component={OdersStackScreen} />
         <Tab.Screen name="Settings" component={SettingsStackScreen} />
       </Tab.Navigator>
