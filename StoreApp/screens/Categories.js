@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 import CategoryListItem from "../components/CategoryListItem";
+import Images from "../contants/images";
 
 export default function Categories(props) {
   const { navigation } = props;
@@ -8,14 +9,17 @@ export default function Categories(props) {
     {
       id: 1,
       name: "Tao có súng đây nè!",
+      image: Images.GUN,
     },
     {
       id: 2,
       name: "Công an đến bắt mày nè!",
+      image: Images.POLYCE_CAR,
     },
     {
       id: 3,
       name: "Còng tay mày lại nè!",
+      image: Images.CONG_TAY,
     },
   ]);
 
@@ -26,7 +30,9 @@ export default function Categories(props) {
         renderItem={({ item }) => (
           <CategoryListItem
             category={item}
-            onPress={() => navigation.navigate("Category")}
+            onPress={() =>
+              navigation.navigate("Category", { categoryName: item.name })
+            }
           />
         )}
         keyExtractor={(item) => `${item.id}`}

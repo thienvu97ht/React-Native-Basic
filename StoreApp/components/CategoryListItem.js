@@ -1,6 +1,5 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Images from "../contants/images";
 
 export default function CategoryListItem(props) {
   const { category, onPress } = props;
@@ -8,7 +7,7 @@ export default function CategoryListItem(props) {
     <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
       <View style={styles.container}>
         <Text style={styles.title}>{category.name}</Text>
-        <Image style={styles.categoryImage} source={Images.CONG_TAY} />
+        <Image style={styles.categoryImage} source={category.image} />
       </View>
     </TouchableOpacity>
   );

@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Category() {
+export default function Category({ route }) {
+  const { categoryName } = route.params;
+
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Category</Text>
+    <View style={styles.container}>
+      <Text style={styles.text__content}>{categoryName}</Text>
     </View>
   );
 }
@@ -12,10 +14,11 @@ export default function Category() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "stretch",
-    backgroundColor: "#fff",
+    alignItems: "center",
     justifyContent: "center",
-    paddingLeft: 16,
-    paddingRight: 16,
+  },
+
+  text__content: {
+    fontSize: 24,
   },
 });
