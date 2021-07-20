@@ -172,9 +172,7 @@ export function AppNavigator() {
             let iconName;
 
             if (route.name === "Home") {
-              iconName = focused
-                ? "ios-information-circle"
-                : "ios-information-circle-outline";
+              iconName = focused ? "ios-home" : "ios-home-outline";
             } else if (route.name === "Cart") {
               iconName = focused ? "cart" : "cart-outline";
             } else if (route.name === "Oders") {

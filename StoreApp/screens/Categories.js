@@ -3,22 +3,22 @@ import { FlatList, StyleSheet, View } from "react-native";
 import CategoryListItem from "../components/CategoryListItem";
 import Images from "../contants/images";
 
-export default function Categories(props) {
+export default function Categories( ) {
   const { navigation } = props;
   const [categories, setCategories] = useState([
     {
       id: 1,
-      name: "Tao có súng đây nè!",
+      name: "Áo thun!",
       image: Images.GUN,
     },
     {
       id: 2,
-      name: "Công an đến bắt mày nè!",
+      name: "Áo sơ mi!",
       image: Images.POLYCE_CAR,
     },
     {
       id: 3,
-      name: "Còng tay mày lại nè!",
+      name: "Hoodie!",
       image: Images.CONG_TAY,
     },
   ]);
